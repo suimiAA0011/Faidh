@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3802E212298979CF00CB3CA7 /* connectbanck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3802E211298979CF00CB3CA7 /* connectbanck.swift */; };
 		3802E214298996A000CB3CA7 /* q.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3802E213298996A000CB3CA7 /* q.swift */; };
+		383938D1298A90B8002D47A1 /* barcharts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383938D0298A90B8002D47A1 /* barcharts.swift */; };
+		383938D4298A920D002D47A1 /* Sitechart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383938D3298A920D002D47A1 /* Sitechart.swift */; };
 		3840430C298613F0001ADBA6 /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3840430B298613F0001ADBA6 /* login.swift */; };
 		3840430E29861609001ADBA6 /* onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3840430D29861609001ADBA6 /* onboarding.swift */; };
 		384819EA2985A41C009C9D3E /* FaidhApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384819E92985A41C009C9D3E /* FaidhApp.swift */; };
@@ -36,6 +38,8 @@
 /* Begin PBXFileReference section */
 		3802E211298979CF00CB3CA7 /* connectbanck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = connectbanck.swift; sourceTree = "<group>"; };
 		3802E213298996A000CB3CA7 /* q.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = q.swift; sourceTree = "<group>"; };
+		383938D0298A90B8002D47A1 /* barcharts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = barcharts.swift; sourceTree = "<group>"; };
+		383938D3298A920D002D47A1 /* Sitechart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sitechart.swift; sourceTree = "<group>"; };
 		3840430B298613F0001ADBA6 /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
 		3840430D29861609001ADBA6 /* onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onboarding.swift; sourceTree = "<group>"; };
 		384819E62985A41C009C9D3E /* Faidh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Faidh.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		383938D2298A91D9002D47A1 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				383938D3298A920D002D47A1 /* Sitechart.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		384819DD2985A41C009C9D3E = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +105,7 @@
 		384819E82985A41C009C9D3E /* Faidh */ = {
 			isa = PBXGroup;
 			children = (
+				383938D2298A91D9002D47A1 /* model */,
 				384819E92985A41C009C9D3E /* FaidhApp.swift */,
 				384819EB2985A41C009C9D3E /* ContentView.swift */,
 				3802E213298996A000CB3CA7 /* q.swift */,
@@ -101,6 +114,7 @@
 				38EC24BD298A570C00C56B54 /* tabbar.swift */,
 				386FA4CA29866B9C000C3321 /* months.swift */,
 				38D6EC18298A6C38009CEE58 /* invesAnalysis.swift */,
+				383938D0298A90B8002D47A1 /* barcharts.swift */,
 				385ACE6B298816BA0025719A /* register.swift */,
 				3802E211298979CF00CB3CA7 /* connectbanck.swift */,
 				384819F92985A45E009C9D3E /* personalinfo.swift */,
@@ -224,9 +238,11 @@
 				385ACE7229881BD40025719A /* profile.swift in Sources */,
 				3840430C298613F0001ADBA6 /* login.swift in Sources */,
 				3840430E29861609001ADBA6 /* onboarding.swift in Sources */,
+				383938D4298A920D002D47A1 /* Sitechart.swift in Sources */,
 				385ACE74298822FD0025719A /* investment.swift in Sources */,
 				384819FC2985A4B6009C9D3E /* analysis.swift in Sources */,
 				3802E214298996A000CB3CA7 /* q.swift in Sources */,
+				383938D1298A90B8002D47A1 /* barcharts.swift in Sources */,
 				3882DC962988E690005B0DBC /* pieChart.swift in Sources */,
 				3882DC982988E7F6005B0DBC /* pieChartrender.swift in Sources */,
 			);

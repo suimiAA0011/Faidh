@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import Charts
 struct invesAnalysis: View {
   
     @State private var selection = ""
@@ -94,13 +94,16 @@ struct invesAnalysis: View {
                                     
                                 }
                             }.padding(.leading, 0.0)
+                           
+                          
                         }
                             
-                            
+   
                         
                  
                         
                     }.padding(.trailing, 125.049)
+                    
                 }
                 
                 
@@ -109,6 +112,24 @@ struct invesAnalysis: View {
            
         }.padding(.bottom, 76.0)
             .background(Color(red: 0.0, green: 0.184, blue: 0.308))
+                
+        }.frame(width: 400,height: 4)
+            .offset(x:-1)
+    }
+}
+
+struct invesAnalysis_Previews: PreviewProvider {
+    static var previews: some View {
+        invesAnalysis()
+    }
+}
+
+
+
+
+
+
+
 //            HStack{
 //                Button {
 //                    forapr.toggle()
@@ -147,17 +168,5 @@ struct invesAnalysis: View {
 //                    home()}
 //
 //            }
-               
-            
-           
-                
-        }.frame(width: 400,height: 4)
-            .offset(x:-1)
-    }
-}
+   
 
-struct invesAnalysis_Previews: PreviewProvider {
-    static var previews: some View {
-        invesAnalysis()
-    }
-}
