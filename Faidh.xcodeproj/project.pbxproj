@@ -11,6 +11,9 @@
 		3802E214298996A000CB3CA7 /* q.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3802E213298996A000CB3CA7 /* q.swift */; };
 		383938D1298A90B8002D47A1 /* barcharts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383938D0298A90B8002D47A1 /* barcharts.swift */; };
 		383938D4298A920D002D47A1 /* Sitechart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383938D3298A920D002D47A1 /* Sitechart.swift */; };
+		383938D6298AB4A4002D47A1 /* opportunities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383938D5298AB4A4002D47A1 /* opportunities.swift */; };
+		383938D8298AB931002D47A1 /* balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383938D7298AB931002D47A1 /* balance.swift */; };
+		383938DA298AC873002D47A1 /* income.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383938D9298AC873002D47A1 /* income.swift */; };
 		3840430C298613F0001ADBA6 /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3840430B298613F0001ADBA6 /* login.swift */; };
 		3840430E29861609001ADBA6 /* onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3840430D29861609001ADBA6 /* onboarding.swift */; };
 		384819EA2985A41C009C9D3E /* FaidhApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384819E92985A41C009C9D3E /* FaidhApp.swift */; };
@@ -40,6 +43,9 @@
 		3802E213298996A000CB3CA7 /* q.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = q.swift; sourceTree = "<group>"; };
 		383938D0298A90B8002D47A1 /* barcharts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = barcharts.swift; sourceTree = "<group>"; };
 		383938D3298A920D002D47A1 /* Sitechart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sitechart.swift; sourceTree = "<group>"; };
+		383938D5298AB4A4002D47A1 /* opportunities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = opportunities.swift; sourceTree = "<group>"; };
+		383938D7298AB931002D47A1 /* balance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = balance.swift; sourceTree = "<group>"; };
+		383938D9298AC873002D47A1 /* income.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = income.swift; sourceTree = "<group>"; };
 		3840430B298613F0001ADBA6 /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
 		3840430D29861609001ADBA6 /* onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onboarding.swift; sourceTree = "<group>"; };
 		384819E62985A41C009C9D3E /* Faidh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Faidh.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +119,7 @@
 				38EC24BB298A539000C56B54 /* recommendations.swift */,
 				38EC24BD298A570C00C56B54 /* tabbar.swift */,
 				386FA4CA29866B9C000C3321 /* months.swift */,
+				383938D9298AC873002D47A1 /* income.swift */,
 				38D6EC18298A6C38009CEE58 /* invesAnalysis.swift */,
 				383938D0298A90B8002D47A1 /* barcharts.swift */,
 				385ACE6B298816BA0025719A /* register.swift */,
@@ -127,6 +134,8 @@
 				3882DC972988E7F6005B0DBC /* pieChartrender.swift */,
 				3840430D29861609001ADBA6 /* onboarding.swift */,
 				384819FB2985A4B6009C9D3E /* analysis.swift */,
+				383938D5298AB4A4002D47A1 /* opportunities.swift */,
+				383938D7298AB931002D47A1 /* balance.swift */,
 				38EC24BF298A5D7900C56B54 /* segmented.swift */,
 				384819FD2985A4F3009C9D3E /* Splash.swift */,
 				384819ED2985A41D009C9D3E /* Assets.xcassets */,
@@ -229,6 +238,8 @@
 				385ACE6C298816BA0025719A /* register.swift in Sources */,
 				385ACE70298819990025719A /* Terms.swift in Sources */,
 				38D6EC19298A6C38009CEE58 /* invesAnalysis.swift in Sources */,
+				383938DA298AC873002D47A1 /* income.swift in Sources */,
+				383938D8298AB931002D47A1 /* balance.swift in Sources */,
 				38EC24BE298A570C00C56B54 /* tabbar.swift in Sources */,
 				385ACE6E2988176E0025719A /* Verification.swift in Sources */,
 				3802E212298979CF00CB3CA7 /* connectbanck.swift in Sources */,
@@ -241,6 +252,7 @@
 				383938D4298A920D002D47A1 /* Sitechart.swift in Sources */,
 				385ACE74298822FD0025719A /* investment.swift in Sources */,
 				384819FC2985A4B6009C9D3E /* analysis.swift in Sources */,
+				383938D6298AB4A4002D47A1 /* opportunities.swift in Sources */,
 				3802E214298996A000CB3CA7 /* q.swift in Sources */,
 				383938D1298A90B8002D47A1 /* barcharts.swift in Sources */,
 				3882DC962988E690005B0DBC /* pieChart.swift in Sources */,

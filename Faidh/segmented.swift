@@ -71,13 +71,13 @@ struct segmented: View {
                             if selected == 1 {
                              
                                     
-                                    analysis()
+                                  balance()
                                     
                                 
                             } else if selected == 2{
                                 
                                 ZStack {
-                                    investment()
+                                    income()
                                 }
                                 
                                 

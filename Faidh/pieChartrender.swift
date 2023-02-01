@@ -56,6 +56,6 @@ struct pieChartrender: View {
 
 struct pieChartrender_Previews: PreviewProvider {
     static var previews: some View {
-        pieChartrender(values: [1300,300], colors: [Color.blue, Color.green, Color.orange], backgroundColor: Color(red: -0.065, green: 0.184, blue: 0.304, opacity: 1.0), innerRadiusFraction: 0.6)
+        pieChartrender(values: [1300,300,10], colors: [Color.blue, Color.green, Color.orange], backgroundColor: Color(red: -0.065, green: 0.184, blue: 0.304, opacity: 1.0), innerRadiusFraction: 0.6)
     }
 }

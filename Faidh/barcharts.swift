@@ -14,28 +14,40 @@ struct barcharts: View {
     @State var sampleAnalytics : [Sitechart] = sample_analytics
     var body: some View {
         NavigationStack{
-            VStack{
+            ScrollView {
                 VStack{
-                    HStack(spacing:70){
-                        Text("dddd")
-                            .fontWeight(.semibold)
+                    VStack{
+                        HStack(spacing:70){
+                            Text("Portfolio Balance")
+                                .fontWeight(.light)
+                                .foregroundColor(.gray)
+                                
+                            Picker(selection: $selected, label: Text("Invesstment")) {
+                                ForEach(0..<invet.count) {
+                                    Text(self.invet[$0])
+                                }}
+                        }.padding(.top, 83.0)
+                        let totalValue = sampleAnalytics.reduce(0.0){ partialResult , item in
+                            item.views + partialResult
                             
-                        Picker(selection: $selected, label: Text("Invesstment")) {
-                            ForEach(0..<invet.count) {
-                                Text(self.invet[$0])
-                            }}
-                    }
-                    let totalValue = sampleAnalytics.reduce(0.0){ partialResult , item in
-                        item.views + partialResult
-                        
-                    } ?? 0.0
-                }
-                
-                
-                
-                AnimatedChart()
-            }.frame(maxWidth: .infinity ,  maxHeight: .infinity,alignment: .top)
-                .padding()
+                        } ?? 0.0
+                        HStack {Text("$")
+                            Text(totalValue.stringFormat)
+                                .font(.largeTitle)
+                                .padding(.trailing, 200.0)
+                        }
+                    }.padding()
+                        .background{
+                            RoundedRectangle(cornerRadius: 10,style: .continuous).fill(.white)
+                        }
+                    
+                    
+                    
+                    
+                    AnimatedChart()
+                }.frame(maxWidth: .infinity ,  maxHeight: .infinity,alignment: .top)
+                    .padding()
+            }
                 
             
         
@@ -59,7 +71,7 @@ struct barcharts: View {
             ForEach(sampleAnalytics){ item in
                 BarMark(
                     x: .value("Hour", item.time),
-                    y: .value("Views", item.views)
+                    y: .value("Views" ,item.views)
                 )
                 
                 
@@ -67,6 +79,9 @@ struct barcharts: View {
             
         }.chartYScale(domain: 0...(max + 200))
         .frame(height: 200)
+//        .onAppear{
+//            ForEach
+//        }
     }        }
 
 struct barcharts_Previews: PreviewProvider {
