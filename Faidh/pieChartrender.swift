@@ -27,33 +27,35 @@ struct pieChartrender: View {
          return tempSlices
      }
     var body: some View {
-        GeometryReader { geometry in
-                    ZStack{
-                        ForEach(0..<self.values.count){ i in
-                            pieChart(pieSliceData: self.slices[i])
+        ZStack {
+            GeometryReader { geometry in
+                        ZStack{
+                            ForEach(0..<self.values.count){ i in
+                                pieChart(pieSliceData: self.slices[i])
+                            }
+                            
+                            
+                            Circle()
+                                .fill(self.backgroundColor)
+                                .frame(width: geometry.size.width * innerRadiusFraction, height: geometry.size.width * innerRadiusFraction)
+                            
+                            VStack {
+//                                Text("Total")
+//                                    .font(.title)
+//                                    .foregroundColor(Color.gray)
+//                                Text(String(values.reduce(0, +)))
+//                                    .font(.title)
+                            }
                         }
-                        .frame(width: geometry.size.width, height: geometry.size.width)
-                        
-                        Circle()
-                            .fill(self.backgroundColor)
-                            .frame(width: geometry.size.width * innerRadiusFraction, height: geometry.size.width * innerRadiusFraction)
-                        
-                        VStack {
-                            Text("Total")
-                                .font(.title)
-                                .foregroundColor(Color.gray)
-                            Text(String(values.reduce(0, +)))
-                                .font(.title)
-                        }
-                    }
-                    .background(self.backgroundColor)
-                    .foregroundColor(Color.white)
-    }
+                        .background(self.backgroundColor)
+                        .foregroundColor(Color.white)
+            }
+        }.frame(width:200,height:190)
     }
 }
 
 struct pieChartrender_Previews: PreviewProvider {
     static var previews: some View {
-        pieChartrender(values: [1300,300, 300], colors: [Color.blue, Color.green, Color.orange], backgroundColor: Color(red: -0.065, green: 0.184, blue: 0.304, opacity: 1.0), innerRadiusFraction: 0.7)
+        pieChartrender(values: [1300,300], colors: [Color.blue, Color.green, Color.orange], backgroundColor: Color(red: -0.065, green: 0.184, blue: 0.304, opacity: 1.0), innerRadiusFraction: 0.6)
     }
 }

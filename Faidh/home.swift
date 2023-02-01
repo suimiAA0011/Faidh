@@ -15,153 +15,145 @@ struct home: View {
         
         ZStack {
             VStack{
-                HStack {
-                    Text("Welcome back Ahmed ")
-                        .foregroundColor(.white)
-                        .fontWeight(.semibold)
-                        .font(.title3)
-                       
-                    .frame(width: 300, height: 41, alignment: .topLeading)
-                    Ellipse()
-                        .fill(Color(red: 0.85, green: 0.85, blue: 0.85))
-                        .frame(width: 48, height: 48)
-                        
-                    
-                }.padding(.bottom, 11.0)
-                Rectangle()
-                    .frame(width: 428, height: 1)
-                    .blur(radius: 0)
-                    .foregroundColor(Color(red: 0.165, green: 0.289, blue: 0.477))
-          
-                    
-                   
                 
-
-             
-                
-                  
-                 
-                
-            }.padding(.bottom, 700)
-            
-            VStack {
-                Spacer()
-                VStack{
-                    Text("Analytics Overview")
-                    .foregroundColor(.white)
-                    .font(.title)
-                        .fontWeight(.semibold)
-                        .font(.subheadline)
-                        
-                    
+                ZStack {
+                    HStack {
+                        months().frame(width: 100,height: 2).padding(.vertical, 168.0)
+                    }.padding(.top, 277.0)
                     ZStack {
-                        RoundedRectangle(cornerRadius: 25)
-                            .fill (Color(.white))
-                            . frame ( width:100,height:40)
-                        
-                        months().frame(width: 100)
-                    }
-                                }.padding(.horizontal, 3.0)
-                    .padding(.top, 320.0)
-                    .padding(.bottom, 156.0)
-Spacer()
-                VStack {
-                    HStack{
-                        
-                        VStack {
+                        HStack {
+                            Text("Welcome back Ahmed ")
+                                .foregroundColor(.white)
+                                .fontWeight(.semibold)
+                                .font(.title3)
+                               
+                            .frame(width: 300, height: 41, alignment: .topLeading)
+                            Ellipse()
+                                .fill(Color(red: 0.847, green: 0.85, blue: 0.85))
+                                .frame(width: 48, height: 48)
+                                
                             
-                            ZStack {
-                                Text("Analtyics")
-                                    .foregroundColor(Color(red: -0.169, green: 0.372, blue: 0.623))
+                        }.padding(.bottom, 83.0)
+                        Rectangle()
+                            .frame(width: 428, height: 1)
+                            .blur(radius: 0)
+                            .foregroundColor(Color(red: 0.169, green: 0.289, blue: 0.477))
+                            .padding(.bottom, 18.0)
+                        Spacer()
+                         
+                                Text("Analytics Overview")
+                                    .foregroundColor(.white)
+                                    .font(.title)
                                     .fontWeight(.semibold)
                                     .font(.subheadline)
-                                
-                                    .frame(width: 118, height: 35)
-                                    .background(Color(.white))
-                                    .cornerRadius(16)
-                                    .shadow(radius: 32)
-                                    .offset(x:180,y:30)
-                                    
-                                Text("Balance")
-                                    .font(.callout)
-                                    .foregroundColor(.white)
-                                    .offset(x: -75, y: -110)
-                                    .padding(.top, 14.0)
-                                
-                                HStack {
-                                    Image(systemName: "arrow.up.forward").foregroundColor(.white)
-                                        .fontWeight(.medium)
-                                        .font(.title)
-                                        .offset(x: -74, y: -80)
-                                        
-                                    Text("$5000.00")
-                                        .foregroundColor(.white)
-                                        .fontWeight(.bold)
-                                        
-                                        .offset(x: -74, y: -80)
-                                    .padding(.top, 14.0)
-                                }
-                            }
-                                .padding(.vertical, 24.0)
-                            HStack {
-                                Spacer()
-                                ZStack {
-                                    
-                                    Text("Spending")
-                                        .font(.callout)
-                                        .foregroundColor(.white)
-                                        .offset(x: -30, y: -110)
-                                        .padding(.top, 14.0)
-                                    
-                                    HStack {
-                                        Image(systemName: "arrow.down.backward").foregroundColor(.white)
-                                            .fontWeight(.medium)
-                                            .font(.title)
-                                            .offset(x: -30, y: -85)
-                                            
-                                        Text("$2500.00")
-                                            .foregroundColor(.white)
-                                            .fontWeight(.bold)
-                                            .offset(x: -30, y: -85)
-                                        .padding(.top, 14.0)
-                                    }
-                                }.padding(.leading, 0.0)
-                                    
-                                    
-                                
-                                VStack {
-                                    ZStack{
-                                        Text("Income")
-                                            .font(.callout)
-                                            .foregroundColor(.white)
-                                            .offset(x: 20, y: -110)
-                                            .padding(.top, 14.0)
-                                        Image(systemName: "arrow.up.forward").foregroundColor(.white)
-                                            .fontWeight(.medium)
-                                            .font(.title)
-                                            
-                                            .offset(x: -10, y: -80)
-                                        Text("$7500.00")
-                                            .foregroundColor(.white)
-                                            .fontWeight(.bold)
-                                            
-                                            .offset(x: 50, y: -85)
-                                        .padding(.top, 14.0)
-                                        
+                                    .padding(.top, 20.0)
+                    
+                    }
+                   
+                }
+               
+                
+                
+            
+                   
 
-                                        
-                                    }
-                                    
-                                }
-                                
-                            }
-                        }
-                        .padding(/*@START_MENU_TOKEN@*/[.top, .bottom, .trailing], 205.0/*@END_MENU_TOKEN@*/)
-                        
-                        
-                    }.padding(.bottom, 16.0)
-                    .position(x:260,y:30)
-                }.padding(.bottom, 63.0)
+//                VStack {
+//                    HStack{
+//                        
+//                        VStack {
+//                            
+//                            ZStack {
+//                                Text("Analtyics")
+//                                    .foregroundColor(Color(red: -0.169, green: 0.372, blue: 0.623))
+//                                    .fontWeight(.semibold)
+//                                    .font(.subheadline)
+//                                
+//                                    .frame(width: 118, height: 35)
+//                                    .background(Color(.white))
+//                                    .cornerRadius(16)
+//                                    .shadow(radius: 32)
+//                                    .offset(x:180,y:30)
+//                                    
+//                                Text("Balance")
+//                                    .font(.callout)
+//                                    .foregroundColor(.white)
+//                                    .offset(x: -75, y: -110)
+//                                    .padding(.top, 14.0)
+//                                
+//                                HStack {
+//                                    Image(systemName: "arrow.up.forward").foregroundColor(.white)
+//                                        .fontWeight(.medium)
+//                                        .font(.title)
+//                                        .offset(x: -74, y: -80)
+//                                        
+//                                    Text("$5000.00")
+//                                        .foregroundColor(.white)
+//                                        .fontWeight(.bold)
+//                                        
+//                                        .offset(x: -74, y: -80)
+//                                    .padding(.top, 14.0)
+//                                }
+//                            }
+//                                .padding(.vertical, 24.0)
+//                            HStack {
+//                                Spacer()
+//                                ZStack {
+//                                    
+//                                    Text("Spending")
+//                                        .font(.callout)
+//                                        .foregroundColor(.white)
+//                                        .offset(x: -30, y: -110)
+//                                        .padding(.top, 14.0)
+//                                    
+//                                    HStack {
+//                                        Image(systemName: "arrow.down.backward").foregroundColor(.white)
+//                                            .fontWeight(.medium)
+//                                            .font(.title)
+//                                            .offset(x: -30, y: -85)
+//                                            
+//                                        Text("$2500.00")
+//                                            .foregroundColor(.white)
+//                                            .fontWeight(.bold)
+//                                            .offset(x: -30, y: -85)
+//                                        .padding(.top, 14.0)
+//                                    }
+//                                }.padding(.leading, 0.0)
+//                                    
+//                                    
+//                                
+//                                VStack {
+//                                    ZStack{
+//                                        Text("Income")
+//                                            .font(.callout)
+//                                            .foregroundColor(.white)
+//                                            .offset(x: 20, y: -110)
+//                                            .padding(.top, 14.0)
+//                                        Image(systemName: "arrow.up.forward").foregroundColor(.white)
+//                                            .fontWeight(.medium)
+//                                            .font(.title)
+//                                            
+//                                            .offset(x: -10, y: -80)
+//                                        Text("$7500.00")
+//                                            .foregroundColor(.white)
+//                                            .fontWeight(.bold)
+//                                            
+//                                            .offset(x: 50, y: -85)
+//                                        .padding(.top, 14.0)
+//                                        
+//
+//                                        
+//                                    }
+//                                    
+//                                }
+//                                
+//                            }
+//                        }
+//                        .padding(/*@START_MENU_TOKEN@*/[.top, .bottom, .trailing], 205.0/*@END_MENU_TOKEN@*/)
+//                        
+//                        
+//                    }.padding(.bottom, 16.0)
+//                    .position(x:260,y:30)
+//                }.padding(.bottom, 63.0)
                 
                
                
@@ -169,7 +161,7 @@ Spacer()
                     ZStack {
                         RoundedRectangle(cornerRadius: 60)
                             .foregroundColor(.white)
-                            .frame(width: 428, height: 620)
+                            .frame(width: 428, height: 600)
                         
                         ScrollView {
                             VStack {
@@ -214,7 +206,7 @@ Spacer()
                                                     .offset(x: 29.50, y: -13)
                                             }
                                             .frame(width: 372, height: 228)
-                                            .background(Color(red: 0.003, green: 0.184, blue: 0.308))
+                                            .background(Color(red: 0.0, green: 0.184, blue: 0.308))
                                             .cornerRadius(26.20)
                                             .frame(width: 372, height: 228)
                                             
@@ -400,7 +392,7 @@ Spacer()
                                                 
                                                 
                                         }
-                                        }}.padding(.top, -13.0)
+                                        }}.padding(.top, -10.0)
                                     .padding(.bottom, 26.0)
 
                             
@@ -413,7 +405,7 @@ Spacer()
                 
             }
             
-        }.background(Color(red: 0.003, green: 0.184, blue: 0.308))
+        }.background(Color(red: 0.0, green: 0.184, blue: 0.308))
     }}
 
 struct home_Previews: PreviewProvider {
