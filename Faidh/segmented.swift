@@ -20,64 +20,88 @@ struct segmented: View {
         
     NavigationView {
         
-        ZStack {
+   
          
-              
+          
+        VStack {
             ZStack {
-  
-                
-           
-                ZStack {
-                
-                    VStack {
-                        Picker(selection: $selected, label: Text("Picker")) {
-                            Text("BALANCE")
-                                .tag(1)
-                            Text("INCOME").tag(2).foregroundColor(.white)
-                            Text("EXPENSES").tag(3)
-                            Text("INVESTMENT").tag(4)
-                                .foregroundColor(.red)
-                        }.pickerStyle(.segmented)
-                            . position (x:200,y:50)
-                            .padding(.vertical, 10.0)
-                            .padding(.top, 45.0)
-                            .frame(width:400)
+                VStack {
+                    HStack {
+                        Text("Analytics ")
+                            .foregroundColor(.black)
+                            .fontWeight(.bold)
+                            .font(.largeTitle)
                         
-                        //
+                            .frame(width: 300, height: 41, alignment: .topLeading)
+                        Image("Ellipse")
+                            .resizable()
+                            .frame(width: 70, height: 70)
+                            .clipShape(Circle())
+                            .shadow(radius: 25)
+                            .overlay(Circle().stroke(Color.black, lineWidth: 1))
                         
-                        if selected == 1 {
-                         
-                                
-                                analysis()
-                                
-                            
-                        } else if selected == 2{
-                            
-                            ZStack {
-                                investment()
-                            }
-                            
-                            
-                               
+                            .frame(width: 48, height: 48)
+                        
+                        
+                        
+                    }.padding()
+                }}
+            ZStack {
+      
                     
-                           
+               
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 20).frame(width: 400,height: 700)
+                            .foregroundColor(Color(red: 0.0, green: 0.184, blue: 0.308)).ignoresSafeArea(.all)
+                        ZStack {
+                            Picker(selection: $selected, label: Text("Picker")) {
+                                Text("BALANCE")
+                                    .tag(1)
+                                Text("INCOME").tag(2).foregroundColor(.white)
+                                Text("EXPENSES").tag(3)
+                                Text("INVESTMENT").tag(4)
+                                    .foregroundColor(.red)
+                            }.pickerStyle(.segmented)
+                                . position (x:200,y:20)
+                                
+                                .frame(width:400)
                             
-                        }
-                        else {
-                           home()
-                            }
-                            //                    NavigationView {
-                            //                        ScrollView{
-                            //                            List {
                             //
-                            //                            }}}
+                            
+                            if selected == 1 {
+                             
+                                    
+                                    analysis()
+                                    
+                                
+                            } else if selected == 2{
+                                
+                                ZStack {
+                                    investment()
+                                }
+                                
+                                
+                                   
+                        
+                               
+                                
+                            }
+                            else {
+                                analysis()
+                                }
+                                //                    NavigationView {
+                                //                        ScrollView{
+                                //                            List {
+                                //
+                                //                            }}}
+                            }
                         }
-                    }
-                    }
+                        }
             .padding()
+        }
            
                
-        }
+        
             
             
         }

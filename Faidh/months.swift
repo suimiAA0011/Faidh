@@ -202,14 +202,14 @@ struct months_Previews: PreviewProvider {
 struct jan: View {
     @State private var selection = ""
     @State var toapr:Bool=false
-    @State var forfeb:Bool=false
-    @State var backfeb:Bool=false
+    @State var forapr:Bool=false
+    @State var backapr:Bool=false
     let months: [String] = Calendar.current.shortMonthSymbols
     var body: some View {
         ZStack {
            
         ZStack {
-            pieChartrender(values: [1300,300], colors: [Color.blue, Color.green, Color.orange], backgroundColor: Color(red: -0.065, green: 0.184, blue: 0.304, opacity: 1.0), innerRadiusFraction: 0.6).padding(.top, 10.0).offset(x:100,y:70)
+            pieChartrender(values: [699,1110], colors: [Color(red: -0.157, green: 0.392, blue: 0.606),Color(red: 0.793, green: 0.479, blue: 0.389)], backgroundColor: Color(red: -0.063, green: 0.184, blue: 0.304), innerRadiusFraction: 0.6).padding(.top, 10.0).offset(x:100,y:70)
             HStack{
                 
                 VStack {
@@ -226,7 +226,7 @@ struct jan: View {
                         .padding(.top, 29.0)
                         .mask(RoundedRectangle(cornerRadius: 10, style: .continuous))
                         .font(Font.custom("Cairo-Bold", size: 24)).padding(.trailing,-5)
-                        .offset(x:130,y: 380)
+                        .offset(x:130,y: 390)
                         .padding()
                         .fullScreenCover(isPresented: $toapr){
                             analysis()}
@@ -243,10 +243,9 @@ struct jan: View {
                                 .padding(.top, 14.0)
                                 .padding(.trailing, 110.0)
                             HStack {
-                                Image(systemName: "arrow.up.forward").foregroundColor(.white)
-                                    .fontWeight(.medium)
-                                    .font(.title)
-                                    .offset(x: -74, y: -80)
+                                RoundedRectangle(cornerRadius: 15).frame(width: 55,height:35).foregroundColor(Color(red: 0.793, green: 0.479, blue: 0.389))
+                               
+                                    .offset(x: -69, y: -70)
                                     
                                 Text("$5000.00")
                                     .foregroundColor(.white)
@@ -267,39 +266,35 @@ struct jan: View {
                                 Text("Spending")
                                     .font(.callout)
                                     .foregroundColor(.white)
-                                    .offset(x: -130, y: -110)
+                                    .offset(x: -100, y: -120)
                                     .padding(.top, 14.0)
                                     .padding(.trailing, 40.0)
                                 
                                 HStack {
-                                    Image(systemName: "arrow.down.backward").foregroundColor(.white)
-                                        .fontWeight(.medium)
-                                        .font(.title)
-                                        .offset(x: -60, y: -85)
+                                    RoundedRectangle(cornerRadius: 15).frame(width: 55,height:35).foregroundColor(Color(red: -0.157, green: 0.392, blue: 0.606))
+                                   
+                                        .offset(x: -44, y: -80)
+                                       
                                         
                                     Text("$2500.00")
                                         .foregroundColor(.white)
                                         .fontWeight(.bold)
-                                        .offset(x: -60, y: -85)
+                                        .offset(x: -50, y: -85)
                                     .padding(.top, 14.0)
-                                }.offset(x:-90,y:4)
+                                }.offset(x:-80,y:4)
                                 VStack {
                                     ZStack{
                                         Text("Income")
                                             .font(.callout)
                                             .foregroundColor(.white)
-                                            .offset(x: 20, y: -110)
+                                            .offset(x: 50, y: -105)
                                             .padding(.top, 14.0)
-                                        Image(systemName: "arrow.up.forward").foregroundColor(.white)
-                                            .fontWeight(.medium)
-                                            .font(.title)
-                                            
-                                            .offset(x: -10, y: -80)
+                                       
                                         Text("$7500.00")
                                             .foregroundColor(.white)
                                             .fontWeight(.bold)
                                             
-                                            .offset(x: 50, y: -85)
+                                            .offset(x: 80, y: -75)
                                         .padding(.top, 14.0)
                                         
 
@@ -321,11 +316,11 @@ struct jan: View {
                 
             }.padding(.bottom, 16.0)
            
-        }.padding(.bottom, 63.0)
+        }.padding(.bottom, 76.0)
             .background(Color(red: 0.0, green: 0.184, blue: 0.308))
             HStack{
                 Button {
-                    forfeb.toggle()
+                    forapr.toggle()
                 } label: {
                     Image(systemName: "chevron.left.circle.fill")
                         .foregroundColor(.white)
@@ -335,9 +330,9 @@ struct jan: View {
                         
                     
                 
-                }.fullScreenCover(isPresented: $forfeb){
+                }.fullScreenCover(isPresented: $forapr){
                     home()}
-                Text("February")
+                Text("January")
                     .foregroundColor(Color(red: -0.169, green: 0.372, blue: 0.623))
                         .fontWeight(.bold)
                         .font(.subheadline)
@@ -347,7 +342,7 @@ struct jan: View {
                         .shadow(radius: 32)
                 
                 Button {
-                    backfeb.toggle()
+                    forapr.toggle()
                 } label: {
                     Image(systemName: "chevron.right.circle.fill")
                         .foregroundColor(.white)
@@ -357,7 +352,7 @@ struct jan: View {
                         
                     
                 
-                }.fullScreenCover(isPresented: $backfeb){
+                }.fullScreenCover(isPresented: $forapr){
                     home()}
                 
             }
@@ -365,10 +360,7 @@ struct jan: View {
             
             .offset(x:-10,y:-80)
                 
-        }.frame(width: 400,height: 30)
-            
-            
-            
+        }.frame(width: 400,height: 50)
         
     }
 }

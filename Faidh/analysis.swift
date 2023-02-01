@@ -11,8 +11,9 @@ struct analysis: View {
     
   
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+        ZStack{
+          invesAnalysis()
+        }}
 }
 
 struct analysis_Previews: PreviewProvider {
