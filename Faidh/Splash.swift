@@ -9,8 +9,14 @@ import SwiftUI
 
 struct Splash: View {
     var body: some View {
-        Image("logo")
-    }
+        
+        ZStack{
+            Rectangle().fill(LinearGradient(colors: [(Color(red:0.817,green: 0.913,blue: 0.963)),Color(.white),(Color(red:0.817,green: 0.913,blue: 0.963))], startPoint: .topLeading, endPoint: .bottomTrailing))
+                .ignoresSafeArea()
+            Image("logo")
+            
+            
+        }}
 }
 
 struct Splash_Previews: PreviewProvider {
@@ -18,3 +24,5 @@ struct Splash_Previews: PreviewProvider {
         Splash()
     }
 }
+
+//DatePicker(selection: $birthDate, in: ...Date(), displayedComponents: .date) {}

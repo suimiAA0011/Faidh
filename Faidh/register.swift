@@ -1,25 +1,26 @@
 //
-//  login.swift
+//  register.swift
 //  Faidh
 //
-//  Created by Salma on 29/01/2023.
+//  Created by Salma on 30/01/2023.
 //
 
 import SwiftUI
 
-struct login: View {
+struct register: View {
+    
+    @State private var name = ""
     @State private var emailAddress = ""
     @State private var password = ""
     @State var login:Bool=false
     @State var registered:Bool=false
-
-
-
     @State var istapped:Bool = false
+    
+    
     var body: some View {
-        VStack(alignment: .leading, spacing: 25.33) {
+        VStack(alignment: .leading, spacing: 10) {
         Group {
-            HStack(spacing: 24.38) {
+            HStack(spacing: 20) {
                 Button {
                     istapped.toggle()
                 }label:{
@@ -28,21 +29,41 @@ struct login: View {
                     .frame(width: 9.62, height: 16.75)
                 }
 
-                    Text("Login")
+                    Text("Register")
                     .fontWeight(.semibold)
-                    .font(.body)
+                    .padding(.trailing, 11.0)
             }
-            .frame(width: 81, height: 24)
+           
 
-            Text("Welcome Back")
+            Text("Welcome To Us")
             .fontWeight(.semibold)
             .font(.title)
 
-            Text("Hello There, Sign In to Continue")
+            Text("Hello There, Create New Account")
             .fontWeight(.medium)
             .font(.callout)
             .foregroundColor(Color(red: 0.606, green: 0.636, blue: 0.67))
             
+            HStack {
+            
+                Image(systemName: "person")
+                    .padding(.leading, 100.0)
+               
+                TextField("name",text: $name) .textFieldStyle(.roundedBorder)
+                    .frame(width: 200, height: 62)
+                    .padding(.leading, 54.0)
+                Spacer()
+                   
+                
+            }
+            .padding(.leading, 16)
+            .padding(.trailing, 178)
+            .padding(.top, 18)
+            .padding(.bottom, 20)
+            .frame(width: 360, height: 62)
+            .background(Color(red: 0.95, green: 0.95, blue: 0.97))
+            .cornerRadius(12)
+            .frame(width: 360, height: 62)
 
             HStack {
                 Spacer()
@@ -93,13 +114,21 @@ struct login: View {
                 RoundedRectangle(cornerRadius: 8)
                   .frame(width: 22, height: 22)
                 
-                Text("Remember Me")
-                .fontWeight(.medium)
-            .font(.caption)
-                Spacer()
-                Text("Forgot Password?")
-                .fontWeight(.medium)
-                .font(.caption)
+                VStack {
+                    Spacer()
+                    Text("By Signing Up, You’re Agree to Our")
+                        .fontWeight(.medium)
+                        .font(.system(size:17))
+                        .padding(.top, 32.0)
+                    Spacer()
+                    Button("Terms & Conditions and Privacy Policy.") {
+                        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                    }
+                    Spacer()
+                }
+              
+               
+               
             }
 
            
@@ -107,7 +136,7 @@ struct login: View {
             Button {
                 login.toggle()
             } label: {
-                Text("Login")
+                Text("Register")
                     .foregroundColor(.white)
                     .fontWeight(.bold)
                     .frame(width: 200,height: 55).background(Color(red: -0.186, green: 0.404, blue: 0.667))
@@ -119,11 +148,11 @@ struct login: View {
             }.padding([.top, .leading, .trailing], 79.0)
 
             HStack {
-                Text("Don’t Have an Account?")
+                Text("Already Have an Account?")
                 Button {
                     registered.toggle()
                 } label: {
-                    Text("Register")
+                    Text("Login")
                         .foregroundColor(Color(red: 0.004, green: 0.402, blue: 0.667))
                         .fontWeight(.bold)
                        
@@ -141,11 +170,12 @@ struct login: View {
         .frame(width: 428, height: 926)
         .background(Color.white)
         .frame(width: 428, height: 926)
-        .background(Color.white)    }
+        .background(Color.white)
+    }
 }
 
-struct login_Previews: PreviewProvider {
+struct register_Previews: PreviewProvider {
     static var previews: some View {
-        login()
+        register()
     }
 }
