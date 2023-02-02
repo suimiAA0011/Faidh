@@ -12,8 +12,8 @@ struct tabbar: View {
         TabView{
            
            home()
-                .tabItem{Label("challenges",systemImage: "house")}
-            analysis()
+                .tabItem{Label("home",systemImage: "house")}
+            segmented()
           
                 .tabItem{Label("analysis",systemImage: "chart.bar.fill")}
             
@@ -22,7 +22,7 @@ struct tabbar: View {
                 .tabItem{Label("recommendations",systemImage: "text.badge.checkmark")}
            
                            
-            investment()
+            opportunities()
                 .tabItem{Label("investment",systemImage: "briefcase")}
         }.accentColor(Color(red: -0.175, green: 0.384, blue: 0.631))
    

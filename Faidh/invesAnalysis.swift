@@ -16,7 +16,7 @@ struct invesAnalysis: View {
     let months: [String] = Calendar.current.shortMonthSymbols
     var body: some View {
         VStack {
-            Spacer()
+            
             ZStack {
                 Spacer()
             ZStack {
@@ -25,7 +25,8 @@ struct invesAnalysis: View {
                     
                     VStack {
                        
-                      Text("You’re have investment is spread to, ect ect  ")
+                      Text("You’re have investment is spread to ")
+                            .foregroundColor(.white)
                             .fontWeight(.semibold)
                             .font(.subheadline)
                             .font(Font.custom("Cairo-Bold", size: 24)).padding(.trailing,-5)
@@ -116,12 +117,11 @@ struct invesAnalysis: View {
                 .background(Color(red: 0.0, green: 0.184, blue: 0.308))
                     
             }.frame(width: 400,height: 160)
-                .offset(x:1,y:100)
+                .offset(y:200)
                 
-            Spacer()
-            barcharts().padding(.top, 201.0)
-        }
-        .padding(.top, 90.0)
+           
+            barcharts().offset(y:300)        }
+        .padding(.top)
     }
 }
 

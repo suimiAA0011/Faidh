@@ -44,14 +44,15 @@ struct segmented: View {
                         
                         
                         
-                    }.padding()
+                    }
                 }}
             ZStack {
       
                     
                
                     ZStack {
-                        RoundedRectangle(cornerRadius: 20).frame(width: 400,height: 700)
+                        Rectangle().fill(Color(red: 0.0, green: 0.184, blue: 0.308))
+                        RoundedRectangle(cornerRadius: 20).frame(width: 400)
                             .foregroundColor(Color(red: 0.0, green: 0.184, blue: 0.308)).ignoresSafeArea(.all)
                         ZStack {
                             Picker(selection: $selected, label: Text("Picker")) {
@@ -76,9 +77,9 @@ struct segmented: View {
                                 
                             } else if selected == 2{
                                 
-                                ZStack {
+                                
                                     income()
-                                }
+                                
                                 
                                 
                                    
@@ -86,7 +87,18 @@ struct segmented: View {
                                
                                 
                             }
-                            else {
+                            else if selected == 3{
+                                
+                                
+                                exp()
+                            
+                            
+                            
+                               
+                    
+                           
+                            
+                        }  else {
                                 analysis()
                                 }
                                 //                    NavigationView {

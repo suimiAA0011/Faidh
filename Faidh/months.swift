@@ -772,9 +772,10 @@ struct inc: View {
             }.frame(width: 400,height: 5)
                 .background(Color(red: 0.0, green: 0.184, blue: 0.308)).ignoresSafeArea(.all)
             VStack{
-                HStack{
+                HStack(spacing:140){
                     Text("Income Transactions")
                         .foregroundColor(.white).fontWeight(.bold)
+                        
                     
                     Button("SEE ALL"){
                         
@@ -827,7 +828,7 @@ struct inc: View {
                 }
                
                      
-            }.frame(width: 800,height: 100)
+            }.frame(width: 800,height: 120)
             .background(Color(red: 0.0, green: 0.184, blue: 0.308)).ignoresSafeArea(.all).padding(.top)
                 .offset(x:10,y:200)
                 
@@ -855,7 +856,7 @@ struct exp: View {
             ZStack {
                
             ZStack {
-                pieChartrender(values: [699,1110], colors: [Color(red: 0.793, green: 0.479, blue: 0.389),Color(red: -0.269, green: 0.619, blue: 0.865)], backgroundColor: Color(red: -0.063, green: 0.184, blue: 0.304), innerRadiusFraction: 0.5).padding(.top, 10.0).offset(x:100,y:70)
+                pieChartrender(values: [699,400,300,250], colors: [Color(red: 0.793, green: 0.479, blue: 0.389),Color(red: -0.269, green: 0.619, blue: 0.865),Color(red: 0.792, green: 0.479, blue: 0.389),Color(red: 0.802, green: 0.385, blue: 0.397)], backgroundColor: Color(red: -0.063, green: 0.184, blue: 0.304), innerRadiusFraction: 0.5).padding(.top, 10.0).offset(x:100,y:70)
                 HStack{
                     
                     VStack {
@@ -1009,62 +1010,82 @@ struct exp: View {
             }.frame(width: 400,height: 5)
                 .background(Color(red: 0.0, green: 0.184, blue: 0.308)).ignoresSafeArea(.all)
             VStack{
-                HStack{
-                    Text("Income Transactions")
+                HStack(spacing:200){
+                    Text("Transactions")
                         .foregroundColor(.white).fontWeight(.bold)
+                        
+                        .padding(.trailing, 3.0)
                     
                     Button("SEE ALL"){
                         
                     }
                 }.padding(.top, 9.0)
                 
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 17)
-                                 .fill(Color(.white))
-                                 .frame(width: 350, height: 60)
-                             .padding(.trailing, 20.0)
-                        HStack(spacing:20){
-                            Image(systemName: "house.circle")
-                            VStack{
-                                
-                                Text("Side hustle")
-                                Text("Deposite")
-                                    .foregroundColor(.gray)
-                              
-                            }
-                            VStack{
-                              
-                                Text("26 DEC")
-                                    .foregroundColor(.gray)
-                                Text("$+350")
-                            }.padding(.leading, 70.0)
-                        }
-                    }
                 ZStack {
                     RoundedRectangle(cornerRadius: 17)
                              .fill(Color(.white))
                              .frame(width: 350, height: 60)
                          .padding(.trailing, 20.0)
                     HStack(spacing:20){
-                       
-                        Image(systemName: "paperplane")
+                        Image(systemName: "phone")
                         VStack{
-                            Text("Salary")
-                            Text("Deposite")
+                            Text("Phone bill")
+                            Text("Utility")
                                 .foregroundColor(.gray)
-                           
+                          
                         }
                         VStack{
                           
-                            Text("25 Jan")
+                            Text("today")
                                 .foregroundColor(.gray)
-                            Text("$+7000")
+                            Text("$-40")
                         }.padding(.leading, 70.0)
                     }
                 }
-               
-                     
-            }.frame(width: 800,height: 100)
+            ZStack {
+                RoundedRectangle(cornerRadius: 17)
+                         .fill(Color(.white))
+                         .frame(width: 350, height: 60)
+                     .padding(.trailing, 20.0)
+                HStack(spacing:20){
+                    Image(systemName: "car.circle.fill")
+                    VStack{
+                        Text("Uber ")
+                        Text("Ride & Food")
+                            .foregroundColor(.gray)
+                       
+                    }
+                    VStack{
+                      
+                        Text("25 Jan")
+                            .foregroundColor(.gray)
+                        Text("$-12")
+                    }.padding(.leading, 70.0)
+                }
+            }
+            ZStack {
+                RoundedRectangle(cornerRadius: 17)
+                         .fill(Color(.white))
+                         .frame(width: 350, height: 60)
+                     .padding(.trailing, 20.0)
+                HStack(spacing:20){
+                    Image(systemName: "house.circle")
+                    VStack{
+                        Text("Electric Bill")
+                        Text("City Bill")
+                            .foregroundColor(.gray)
+                       
+                    }
+                    VStack{
+                      
+                        Text("19 Jan")
+                            .foregroundColor(.gray)
+                        Text("$-37")
+                    }.padding(.leading, 70.0)
+                }
+            }
+        
+            }.frame(width: 800,height: 99)
             .background(Color(red: 0.0, green: 0.184, blue: 0.308)).ignoresSafeArea(.all).padding(.top)
                 .offset(x:10,y:200)
                 

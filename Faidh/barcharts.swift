@@ -14,45 +14,48 @@ struct barcharts: View {
     @State var sampleAnalytics : [Sitechart] = sample_analytics
     var body: some View {
         NavigationStack{
-            ScrollView {
+       
+            
                 VStack{
-                    VStack{
-                        HStack(spacing:70){
-                            Text("Portfolio Balance")
-                                .fontWeight(.light)
-                                .foregroundColor(.gray)
+                       
+                            HStack(spacing:70){
+                                Text("Portfolio Balance")
+                                    .fontWeight(.light)
+                                    .foregroundColor(.gray)
+                                    
+                                Picker(selection: $selected, label: Text("Invesstment")) {
+                                    ForEach(0..<invet.count) {
+                                        Text(self.invet[$0])
+                                    }}
+                            }.padding(.top, 83.0)
+                            let totalValue = sampleAnalytics.reduce(0.0){ partialResult , item in
+                                item.views + partialResult
                                 
-                            Picker(selection: $selected, label: Text("Invesstment")) {
-                                ForEach(0..<invet.count) {
-                                    Text(self.invet[$0])
-                                }}
-                        }.padding(.top, 83.0)
-                        let totalValue = sampleAnalytics.reduce(0.0){ partialResult , item in
-                            item.views + partialResult
-                            
-                        } ?? 0.0
-                        HStack {Text("$")
-                            Text(totalValue.stringFormat)
-                                .font(.largeTitle)
-                                .padding(.trailing, 200.0)
-                        }
-                    }.padding()
-                        .background{
-                            RoundedRectangle(cornerRadius: 10,style: .continuous).fill(.white)
-                        }
-                    
-                    
-                    
-                    
-                    AnimatedChart()
-                }.frame(maxWidth: .infinity ,  maxHeight: .infinity,alignment: .top)
-                    .padding()
+                            }
+                            HStack {Text("$")
+                                Text(totalValue.stringFormat)
+                                    .font(.largeTitle)
+                                    .padding(.trailing, 200.0)
+                            }
+                        
+                            .background{
+                                RoundedRectangle(cornerRadius: 10).fill(.white)
+                            }
+                        
+                        
+                        
+                        
+                        AnimatedChart()
+                }.padding(.top)
+                .frame(height: 200)
+                
+                .offset(x:1,y:-90)
             }
                 
             
         
             
-        }
+        
     }
 
 
@@ -77,8 +80,9 @@ struct barcharts: View {
                 
             }
             
-        }.chartYScale(domain: 0...(max + 200))
-        .frame(height: 200)
+        }.chartYScale(domain: 0...(max + 7))
+            .frame(width:350
+                   ,height: 100).padding(.bottom, 170.0)
 //        .onAppear{
 //            ForEach
 //        }

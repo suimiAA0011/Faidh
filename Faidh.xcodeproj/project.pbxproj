@@ -14,6 +14,11 @@
 		383938D6298AB4A4002D47A1 /* opportunities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383938D5298AB4A4002D47A1 /* opportunities.swift */; };
 		383938D8298AB931002D47A1 /* balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383938D7298AB931002D47A1 /* balance.swift */; };
 		383938DA298AC873002D47A1 /* income.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383938D9298AC873002D47A1 /* income.swift */; };
+		383938E0298AD777002D47A1 /* moretrans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383938DF298AD777002D47A1 /* moretrans.swift */; };
+		383938E2298AD79F002D47A1 /* morefood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383938E1298AD79F002D47A1 /* morefood.swift */; };
+		383938E4298AD7AD002D47A1 /* othertrans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383938E3298AD7AD002D47A1 /* othertrans.swift */; };
+		383938E6298AD7C0002D47A1 /* moretranspor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383938E5298AD7C0002D47A1 /* moretranspor.swift */; };
+		383938E8298AD7DC002D47A1 /* morebils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383938E7298AD7DC002D47A1 /* morebils.swift */; };
 		3840430C298613F0001ADBA6 /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3840430B298613F0001ADBA6 /* login.swift */; };
 		3840430E29861609001ADBA6 /* onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3840430D29861609001ADBA6 /* onboarding.swift */; };
 		384819EA2985A41C009C9D3E /* FaidhApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384819E92985A41C009C9D3E /* FaidhApp.swift */; };
@@ -46,6 +51,11 @@
 		383938D5298AB4A4002D47A1 /* opportunities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = opportunities.swift; sourceTree = "<group>"; };
 		383938D7298AB931002D47A1 /* balance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = balance.swift; sourceTree = "<group>"; };
 		383938D9298AC873002D47A1 /* income.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = income.swift; sourceTree = "<group>"; };
+		383938DF298AD777002D47A1 /* moretrans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moretrans.swift; sourceTree = "<group>"; };
+		383938E1298AD79F002D47A1 /* morefood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = morefood.swift; sourceTree = "<group>"; };
+		383938E3298AD7AD002D47A1 /* othertrans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = othertrans.swift; sourceTree = "<group>"; };
+		383938E5298AD7C0002D47A1 /* moretranspor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moretranspor.swift; sourceTree = "<group>"; };
+		383938E7298AD7DC002D47A1 /* morebils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = morebils.swift; sourceTree = "<group>"; };
 		3840430B298613F0001ADBA6 /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
 		3840430D29861609001ADBA6 /* onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onboarding.swift; sourceTree = "<group>"; };
 		384819E62985A41C009C9D3E /* Faidh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Faidh.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +128,11 @@
 				384819F72985A42A009C9D3E /* home.swift */,
 				38EC24BB298A539000C56B54 /* recommendations.swift */,
 				38EC24BD298A570C00C56B54 /* tabbar.swift */,
+				383938DF298AD777002D47A1 /* moretrans.swift */,
+				383938E1298AD79F002D47A1 /* morefood.swift */,
+				383938E3298AD7AD002D47A1 /* othertrans.swift */,
+				383938E5298AD7C0002D47A1 /* moretranspor.swift */,
+				383938E7298AD7DC002D47A1 /* morebils.swift */,
 				386FA4CA29866B9C000C3321 /* months.swift */,
 				383938D9298AC873002D47A1 /* income.swift */,
 				38D6EC18298A6C38009CEE58 /* invesAnalysis.swift */,
@@ -236,10 +251,14 @@
 				38EC24BC298A539000C56B54 /* recommendations.swift in Sources */,
 				384819EC2985A41C009C9D3E /* ContentView.swift in Sources */,
 				385ACE6C298816BA0025719A /* register.swift in Sources */,
+				383938E8298AD7DC002D47A1 /* morebils.swift in Sources */,
+				383938E6298AD7C0002D47A1 /* moretranspor.swift in Sources */,
 				385ACE70298819990025719A /* Terms.swift in Sources */,
 				38D6EC19298A6C38009CEE58 /* invesAnalysis.swift in Sources */,
 				383938DA298AC873002D47A1 /* income.swift in Sources */,
 				383938D8298AB931002D47A1 /* balance.swift in Sources */,
+				383938E0298AD777002D47A1 /* moretrans.swift in Sources */,
+				383938E4298AD7AD002D47A1 /* othertrans.swift in Sources */,
 				38EC24BE298A570C00C56B54 /* tabbar.swift in Sources */,
 				385ACE6E2988176E0025719A /* Verification.swift in Sources */,
 				3802E212298979CF00CB3CA7 /* connectbanck.swift in Sources */,
@@ -256,6 +275,7 @@
 				3802E214298996A000CB3CA7 /* q.swift in Sources */,
 				383938D1298A90B8002D47A1 /* barcharts.swift in Sources */,
 				3882DC962988E690005B0DBC /* pieChart.swift in Sources */,
+				383938E2298AD79F002D47A1 /* morefood.swift in Sources */,
 				3882DC982988E7F6005B0DBC /* pieChartrender.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
