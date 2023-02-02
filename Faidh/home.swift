@@ -12,6 +12,8 @@ struct home: View {
     @State private var birthDate = Date()
     @State var recomm:Bool=false
     @State var oppor:Bool=false
+    @State var toprof:Bool=false
+    
     var body: some View {
         TabView{
             
@@ -21,8 +23,8 @@ struct home: View {
                     
                     ZStack {
                         HStack {
-                            months().frame(width: 100,height: 2).padding(.vertical, 168.0)
-                        }.padding(.top, 277.0)
+                            months().frame(width: 100,height: 2).padding(.vertical, 163.0)
+                        }.padding(.top, 338.0)
                         ZStack {
                             HStack {
                                 Text("Welcome back Ahmed ")
@@ -30,26 +32,38 @@ struct home: View {
                                     .fontWeight(.semibold)
                                     .font(.title3)
                                 
-                                    .frame(width: 300, height: 41, alignment: .topLeading)
-                                Ellipse()
-                                    .fill(Color(red: 0.847, green: 0.85, blue: 0.85))
-                                    .frame(width: 48, height: 48)
+                                    .frame(width: 300, height: 4)
+                                    .padding(.top)
+                                Button{
+                                    toprof.toggle()
+                                }
+                            label:{
+                                Image("Ellipse")
+                                    .resizable()
+                                    .frame(width: 50, height: 50)
+                                    .clipShape(Circle())
+                                    .shadow(radius: 25)
+                                    .overlay(Circle().stroke(Color.black, lineWidth: 1))
+                                
+                                .frame(width: 40, height: 40)}.fullScreenCover(isPresented: $toprof){
+                                    profile()
+                                }
                                 
                                 
-                            }.padding(.bottom, 83.0)
+                            }.padding(.top, -40.0)
                             Rectangle()
                                 .frame(width: 428, height: 1)
                                 .blur(radius: 0)
                                 .foregroundColor(Color(red: 0.169, green: 0.289, blue: 0.477))
-                                .padding(.bottom, 18.0)
-                            Spacer()
+                                .padding(.top, 8.0)
+                            
                             
                             Text("Analytics Overview")
                                 .foregroundColor(.white)
                                 .font(.title)
                                 .fontWeight(.semibold)
                                 .font(.subheadline)
-                                .padding(.top, 20.0)
+                                .padding(.top, 73.0)
                             
                         }
                         
@@ -275,7 +289,7 @@ struct home: View {
                                                         .offset(x: 29.50, y: -13)
                                                 }
                                                 .frame(width: 372, height: 228)
-                                                .background(Color(red: 0.003, green: 0.184, blue: 0.308))
+                                                .background(Color(red: 0.0, green: 0.184, blue: 0.308))
                                                 .cornerRadius(26.20)
                                                 .frame(width: 372, height: 228)
                                                 
@@ -478,7 +492,7 @@ struct homestart: View {
 
                     }.tag(2)
                     
-            segmented().tabItem {
+            opportunities().tabItem {
                         if selection == 3 {
                             Image(systemName: "briefcase.fill")
                         } else {
@@ -489,7 +503,7 @@ struct homestart: View {
           
                     
         }
-            .accentColor(Color(red: -0.175, green: 0.384, blue: 0.631))
+        .accentColor(Color(red: -0.175, green: 0.384, blue: 0.631))
     }
 }
 
